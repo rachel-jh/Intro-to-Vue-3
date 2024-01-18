@@ -27,6 +27,8 @@
 
             <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
             <br/>
+            <!-- not best practice to use index as key. In this case, the array is set and will not change, so it's fine to use it. -->
+            <!-- Similar concept to the unique key that React uses to identify an element. -->
             <div v-for="(size, index) in sizes" :key="index">{{ size }}</div>
           </div>
         </div>
